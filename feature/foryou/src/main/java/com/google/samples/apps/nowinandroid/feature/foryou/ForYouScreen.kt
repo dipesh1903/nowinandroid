@@ -58,7 +58,6 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -375,7 +374,6 @@ private fun TopicSelection(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun SingleTopicButton(
     name: String,
@@ -436,7 +434,6 @@ fun TopicIcon(
     modifier: Modifier = Modifier,
 ) {
     DynamicAsyncImage(
-        // TODO b/228077205, show loading image visual instead of static placeholder
         placeholder = painterResource(R.drawable.ic_icon_placeholder),
         imageUrl = imageUrl,
         contentDescription = null, // decorative
